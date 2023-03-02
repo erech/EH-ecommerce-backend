@@ -54,8 +54,8 @@ router.get('/:id', (req, res) => {
   })
   .then(dbCategoryData => res.json(dbCategoryData))
       .catch(err => {
-        console.log(error);
-        res.status(500).json(error);
+        console.log(error)
+        res.status(500).json(error)
       })
 });
 
@@ -85,14 +85,14 @@ router.put('/:id', (req, res) => {
   )
     .then(dbCategoryData => {
       if (!dbCategoryData) {
-        res.status(404).json({ message: 'Empty' });
+        res.status(404).json({ message: 'Empty' })
         return;
       }
-      res.json(dbCategoryData);
+      res.json(dbCategoryData)
     })
     .catch(err => {
-      console.log(error);
-      res.status(500).json(error);
+      console.log(error)
+      res.status(500).json(error)
     })
 });
 
@@ -105,14 +105,14 @@ router.delete('/:id', (req, res) => {
   })
     .then(dbCategoryData => {
       if (!dbCategoryData) {
-        res.status(404).json({ message: 'Empty' });
-        return;
+        res.status(404).json({ message: 'Empty' })
+        return
       }
-      res.json(dbCategoryData);
+      res.json(dbCategoryData)
     })
     .catch(err => {
-      console.log(error);
-      res.status(500).json(error);
+      console.log(error)
+      res.status(500).json(error)
     })
 });
 
