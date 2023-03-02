@@ -12,26 +12,26 @@ Product.init(
     // define columns
     id: 
     {
-      type: DataTypes.Integer,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     product_name :
     {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false
     },
     price :
     {
-      type: DataTypes.Integer,
+      type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 100, 
       validate: { inNumeric: true }
     },
     category_id: 
     {
-      type: DataTypes.Integer,
+      type: DataTypes.INTEGER,
       references: {
         model: 'category',
         key: 'id'
