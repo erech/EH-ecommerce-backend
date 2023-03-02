@@ -66,7 +66,7 @@ router.post('/', (req, res) => {
     category_name: req.body.category_name
   })
     .then(dbCategoryData => res.json(dbCategoryData))
-    .catch(err => {
+    .catch(error => {
       console.log(error);
       res.status(500).json(error);
     })
@@ -90,7 +90,7 @@ router.put('/:id', (req, res) => {
       }
       res.json(dbCategoryData)
     })
-    .catch(err => {
+    .catch(error => {
       console.log(error)
       res.status(500).json(error)
     })
@@ -110,7 +110,7 @@ router.delete('/:id', (req, res) => {
       }
       res.json(dbCategoryData)
     })
-    .catch(err => {
+    .catch(error => {
       console.log(error)
       res.status(500).json(error)
     })

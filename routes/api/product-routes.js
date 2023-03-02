@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
     ]
   })
   .then(dbProductData => res.json(dbProductData))
-  .catch(err => {
+  .catch(error => {
     console.log(error)
     res.status(500).json(error)
   })
@@ -58,7 +58,7 @@ router.get('/:id', (req, res) => {
       }]
   })
   .then(dbProductData => res.json(dbProductData))
-  .catch(err => {
+  .catch(error => {
     console.log(error)
     res.status(500).json(error)
       })
@@ -153,7 +153,7 @@ router.delete('/:id', (req, res) => {
       }
       res.json(dbProductData)
     })
-    .catch(err => {
+    .catch(error => {
       console.log(error)
       res.status(500).json(error)
     })
